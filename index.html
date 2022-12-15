@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Discount calculator</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="app-wrapper">
+      <h1>Discount calculator</h1>
+      <div class="app-inputs">
+        <label for="originalPriceInput">Original price</label>
+        <input
+          onkeyup="calculateDiscount()"
+          type="number"
+          id="originalPriceInput"
+        />
+        <label for="discountPrecentageInput">Discount precentage</label>
+        <input
+          onkeyup="calculateDiscount()"
+          type="number"
+          id="discountPrecentageInput"
+        />
+      </div>
+      <div class="app-results" id="finalPrices">
+        <h2>Final price is 0.00</h2>
+        <p>Your savings will be 0.00</p>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
