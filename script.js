@@ -1,7 +1,5 @@
 const originalPriceInput = document.getElementById("originalPriceInput");
-const discountPrecentageInput = document.getElementById(
-  "discountPrecentageInput"
-);
+const discountPrecentageInput = document.getElementById("discountPrecentageInput");
 const finalPrices = document.getElementById("finalPrices");
 
 // calculate discount
@@ -17,13 +15,7 @@ const calculateDiscount = () => {
   console.log({ finalPrice: finalPrice, yourSavings: savings });
 
   finalPrices.innerHTML = `
-    <h2>Final price is ${finalPrice.toLocaleString(undefined, {
-      minimumFractionDigits: 2,
-      maximumFractionDigits: 2,
-    })}</h2>
-    <p>Your savings will be ${savings.toLocaleString(undefined, {
-      minimumFractionDigits: 2,
-      maximumFractionDigits: 2,
-    })}</p>
+    <h2>Final price is ${finalPrice.toLocaleString(undefined, {minimumFractionDigits: 2, maximumFractionDigits: 2,})}</h2>
+    <p>Your savings will be ${savings.toLocaleString(undefined, {minimumFractionDigits: 2, maximumFractionDigits: 2,})}</p>
    `;
 };
