@@ -8,26 +8,23 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
+    <h1 class="app-title"><span>discount</span> calculator</h1>
     <div class="app-wrapper">
-      <h1>Discount calculator</h1>
-      <div class="app-inputs">
+      <div class="app-input">
+        
+        <input onkeyup="calculateDiscount()" type="text" id="originalPriceInput"/>
         <label for="originalPriceInput">Original price</label>
-        <input
-          onkeyup="calculateDiscount()"
-          type="number"
-          id="originalPriceInput"
-        />
+      </div>
+      <div class="app-input">
+        <input onkeyup="calculateDiscount()" type="text" id="discountPrecentageInput"/>
         <label for="discountPrecentageInput">Discount precentage</label>
-        <input
-          onkeyup="calculateDiscount()"
-          type="number"
-          id="discountPrecentageInput"
-        />
+        <img src="assets/percentage.svg" alt="">
       </div>
       <div class="app-results" id="finalPrices">
-        <h2>Final price is 0.00</h2>
-        <p>Your savings will be 0.00</p>
+        <h2>Final price is <span>0.00</span></h2>
+        <p>Your savings will be <span>0.00</span></p>
       </div>
+      <button class="btn"><span>Reset</span><img src="assets/reset.svg" alt=""></button>
     </div>
 
     <script src="script.js"></script>

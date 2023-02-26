@@ -1,4 +1,13 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
+:root {
+    --primary: hsl(17, 100%, 62%);
+    --primary-hover: hsl(17, 100%, 66%);
+    --dark: #292929;
+}
+
+html {
+    font-size: .9rem;
+}
 * {
     padding: 0;
     margin: 0;
@@ -9,39 +18,104 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
     min-height: 100vh;
+    background-color: #383838;
+    color: white;
+    margin: 0 1rem;
 }
-/* Chrome, Safari, Edge, Opera */
-input::-webkit-outer-spin-button,
-input::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
-}
-/* Firefox */
-input[type=number] {
-  -moz-appearance: textfield;
-}
+
 .app-wrapper {
     max-width: 400px;
     width: 100%;
-    margin: 1rem;
+    padding: 32px 24px;
+    background-color: #303030;
+    border-radius: 1rem;
 }
-.app-wrapper h1 {
-    margin-bottom: 3rem;
+.app-title {
+    margin-bottom: 2.25rem;
+    text-transform: capitalize;
+    font-size: 2rem;
     text-align: center;
 }
-.app-inputs {
-    display: flex;
-    flex-direction: column;
+.app-title span {
+    color: var(--primary);
 }
-.app-inputs input {
+.app-input {
+    display: flex;
+    flex-direction: column-reverse;
+    position: relative;
+}
+.app-input img {
+    position: absolute;
+    right: 0;
+    padding: 16px;
+    top: 26px;
+}
+.app-input label {
+    font-size: 12px;
+    margin-bottom: 8px;
+    display: inline;
+}
+.app-input input {
     flex: 1;
-    padding: .5rem;
-    margin: .5rem 0 1rem;
-    border: 1px solid gainsboro;
-    border-radius: .25rem;
+    padding: 1rem 1.5rem;
+    margin-bottom: 1rem;
+    min-height: 50px;
+    border: none;
+    border-radius: 0.625rem;
     outline: none;
+    background-color: #282828;
+    color: white;
+}
+.app-input input:focus {
+    border: 1px solid var(--primary);
+}
+.app-input input:focus + label {
+    color: var(--primary);
+}
+.app-results {
+    margin: 1.5rem 0 2.5rem;
 }
 .app-results h2 {
-    margin: 1rem 0;
+    margin-bottom: 1rem;
+    font-weight: 600;
 }
+.app-results h2,
+.app-results p {
+    overflow-wrap: break-word;
+}
+.app-results span {
+    color: var(--primary);
+}
+.btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 50px;
+    border-radius: 0.625rem;
+    font-size: inherit;
+    font-weight: 600;
+    gap: .25rem;
+    width: 100%;
+    background-color: var(--primary);
+    color: var(--dark);
+    border: none;
+    cursor: pointer;
+}
+.btn:hover {
+    background-color: var(--primary-hover);
+}
+.btn img {
+    height: 16px;
+}
+
+
+@media (min-width: 450px) {
+    html {
+        font-size: 1rem;
+    }
+    .app-wrapper {
+        padding: 50px 40px;
+    }
+  }
