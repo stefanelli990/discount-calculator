@@ -8,17 +8,21 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
+    
     <h1 class="app-title"><span>discount</span> calculator</h1>
     <div class="app-wrapper">
       <div class="app-input">
-        
         <input onkeyup="calculateDiscount()" type="text" id="originalPriceInput"/>
         <label for="originalPriceInput">Original price</label>
       </div>
-      <div class="app-input">
-        <input onkeyup="calculateDiscount()" type="text" id="discountPrecentageInput"/>
-        <label for="discountPrecentageInput">Discount precentage</label>
-        <img src="assets/percentage.svg" alt="">
+      <label for="sliderRange">Discount percentage</label>
+      <div id="slidecContainer">
+        <input onchange="calculateDiscount()" type="range" step="5"  id="sliderRange">
+        <output id="sliderOutput"></output>
+        <div class="labels">
+          <span>0%</span>
+          <span>100%</span>
+        </div>
       </div>
       <div class="app-results" id="finalPrices">
         <h2>Final price is <span>0.00</span></h2>
